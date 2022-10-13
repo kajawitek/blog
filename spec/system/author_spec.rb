@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 # frozen_string_literal: true
 describe 'author registrations, signing in and signing out' do
