@@ -18,9 +18,12 @@ gem "faker"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'rspec-rails', '~> 6.0'
+  gem 'capybara', '~> 3.37', '>= 3.37.1'
+  gem 'selenium-webdriver', '~> 4.5'
 end
 
-group :development, :test do
+group :development do
   gem "web-console"
-  gem 'rspec-rails', '~> 6.0'
 end
