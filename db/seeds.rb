@@ -8,3 +8,9 @@ puts '# Creating Authors'
                                    password: 'password')
   puts author.email
 end
+
+puts '# Creating Posts'
+5.times do
+  post = Post.create(title: Faker::Book.title, content: Faker::Quote.matz, author_id: Author.all.sample.id)
+  puts post.title
+end

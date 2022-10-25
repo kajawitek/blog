@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-# frozen_string_literal: true
+
 describe 'author registrations, signing in and signing out' do
   let!(:author) { build(:author) }
 
@@ -18,7 +18,7 @@ describe 'author registrations, signing in and signing out' do
     expect(page).to have_content 'You have signed up successfully.'
 
     click_button 'Sign Out'
-    expect(page).to have_content 'Signed out successfully.'
+    expect(page).to have_content 'You need to sign in or sign up before continuing.'
 
     click_link 'Sign In'
     fill_in 'author[email]', with: author.email
